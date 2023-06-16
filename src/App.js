@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from 'react-toastify' 
 import Explore from "./pages/Explore";
 import Offer from "./pages/Offer";
 import Profile from "./pages/Profile";
@@ -17,7 +18,7 @@ function App() {
           <Route path="/" element={<Explore />} />
           <Route path="/offer" element={<Offer />} />
           <Route path="/forgot-password" element={<ForgotPass />} />
-          <Route path="/profile" element={<SignIn />} />
+          <Route path="/profile" element={<Profile/>} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/sign-in" element={<SignIn />} />
         </Routes>
