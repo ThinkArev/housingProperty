@@ -8,6 +8,8 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Navbar from "./components/Navbar";
 import PrivateRoute from "./components/PrivateRoute";
+import Profile2 from "./pages/Profile2"
+
 function App() {
   return (
     <div className="App">
@@ -18,9 +20,14 @@ function App() {
           <Route path="/" element={<Explore />} />
           <Route path="/offer" element={<Offer />} />
           <Route path="/forgot-password" element={<ForgotPass />} />
-          <Route path="/profile" element={<PrivateRoute />} >
+          {/* <Route path="/profile" element={<PrivateRoute />} >
             <Route path='/profile' element={<Profile />} />
-            </Route>
+          </Route> */}
+          <Route path='/profile' element={<PrivateRoute />} >
+          <Route path='/profile' element={<Profile />} />
+          </Route>
+          <Route path='/profile' element={<Profile />} />
+          <Route path="/profile2" element={<Profile2/>} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/sign-in" element={<SignIn />} />
         </Routes>

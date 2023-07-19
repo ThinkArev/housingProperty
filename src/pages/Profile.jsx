@@ -9,9 +9,9 @@ const Profile = () => {
   const auth = getAuth()
   const navigate = useNavigate()
   useEffect(() => {
-   // console.log(auth.currentUser.email)
+   console.log('úseEffect', auth.currentUser?.email ,)
     setUser(auth.currentUser)
-  }, [])
+  },[user])
 
   const [formData, setFormData] = useState
     ({

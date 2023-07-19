@@ -4,7 +4,7 @@ import { ReactComponent as ExploreIcon } from '../assets/svg/exploreIcon.svg'
 import { ReactComponent as PersonOutlineIcon } from '../assets/svg/personOutlineIcon.svg'
 import { useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
-const Navbar = () => {
+const Navbar = () => {  
 
     const navigate = useNavigate()
     const location = useLocation()

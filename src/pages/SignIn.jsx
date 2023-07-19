@@ -30,6 +30,7 @@ const SignIn = () => {
             const userCredential = await signInWithEmailAndPassword(
                 auth, email, password)
             console.log("try", userCredential)
+
             if (userCredential.user) {
                 navigate('/profile')
                 console.log("users ",userCredential.user)
@@ -37,7 +38,7 @@ const SignIn = () => {
 
         }
         catch (error) {
-            toast.error(error);
+            alert(error);
         }
 
     }

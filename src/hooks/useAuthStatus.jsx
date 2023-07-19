@@ -5,6 +5,7 @@ export const useAuthStatus = () => {
     const [loggedIn, setLoggedIn] = useState(false)
     const [checkingStatus, setCheckingStatus] = useState(true)
 
+    
     useEffect(() => {
         const auth = getAuth()
         onAuthStateChanged(auth, (user) => {
