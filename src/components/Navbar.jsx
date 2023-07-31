@@ -4,7 +4,7 @@ import { ReactComponent as ExploreIcon } from '../assets/svg/exploreIcon.svg'
 import { ReactComponent as PersonOutlineIcon } from '../assets/svg/personOutlineIcon.svg'
 import { useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
-const Navbar = () => {  
+const Navbar = () => {
 
     const navigate = useNavigate()
     const location = useLocation()
@@ -26,7 +26,10 @@ const Navbar = () => {
                             pathMatchRoute('/') ? 'navbarListItemNameActive' :
                                 'navbarListItemName'
                         }> Explore</p> </li>
-                    <li className="navbarListItem" onClick={() => navigate('/profile')}>
+                    <li className="navbarListItem" onClick={() => {
+                       
+                        navigate('/profile')
+                    }}>
                         <PersonOutlineIcon fill={pathMatchRoute('/profile') ? '#2c2c2c' : '#8f8f8f'} width='36px' height='36px' />  <p className={
                             pathMatchRoute('/profile') ? 'navbarListItemNameActive' :
                                 'navbarListItemName'}> Person</p> </li>

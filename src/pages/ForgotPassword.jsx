@@ -1,10 +1,47 @@
+import { sendPasswordResetEmail } from 'firebase/auth'
+import ArrowRightIcon
 import React from 'react'
-
+import {}
 const ForgotPassword = () => {
+
+  const [Email, setEmail] = useState('')
+  const onChange = (e) => {
+    
+  }
+  const onSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      const auth = getAuth()
+      await sendPasswordResetEmail(auth, Email)
+      toast.success('Email was sent')
+
+    }
+    catch (error) {
+      toast.error('Could not send reset email')
+    }
+  }
   return (
-    <div>
-      
-    </div>
+    <div className="pageContainer">
+      <header> 
+        <p className="pageHeader"> Forgot Password</p>
+      </header>
+
+      <main>
+        <form onSubmit={onSubmit}>
+          <input type='email' className='emailInput' placeholder="Email" id='email' value={email} onChange={onChange} />
+          <Link className='forgotPasswordLink' to='/sign-in' >
+Sign In
+          </Link>
+          <div className="signInBar">
+            <div className="signInText">
+              Send Reset Link
+            </div><button className="signInButton">
+              <ArrowRightIcon fill='#ffffff' width='34px' height='34px'  />
+            </button>
+          </div>
+        </form>
+      </main>
+</div>
   )
 }
 

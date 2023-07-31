@@ -56,6 +56,7 @@ const Profile = () => {
       [e.target.id]: e.target.value,
     }))
   }
+  
   return <div className='profile'>
     <header className="profileHeader">
       <p className="pageHeader">My Profile</p>

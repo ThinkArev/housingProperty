@@ -9,6 +9,8 @@ import SignUp from "./pages/SignUp";
 import Navbar from "./components/Navbar";
 import PrivateRoute from "./components/PrivateRoute";
 import Profile2 from "./pages/Profile2"
+import Category from "./pages/Category";
+
 
 function App() {
   return (
@@ -20,16 +22,14 @@ function App() {
           <Route path="/" element={<Explore />} />
           <Route path="/offer" element={<Offer />} />
           <Route path="/forgot-password" element={<ForgotPass />} />
-          {/* <Route path="/profile" element={<PrivateRoute />} >
-            <Route path='/profile' element={<Profile />} />
-          </Route> */}
-          <Route path='/profile' element={<PrivateRoute />} >
-          <Route path='/profile' element={<Profile />} />
+          <Route path="/profile" element={<PrivateRoute />}>
+            <Route path="/profile" element={<Profile />} />
           </Route>
-          <Route path='/profile' element={<Profile />} />
-          <Route path="/profile2" element={<Profile2/>} />
+          <Route path='/offers' element={<Offer />} />
+          <Route path="/profile2" element={<Profile2 />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/sign-in" element={<SignIn />} />
+          <Route path='/category/:categoryName' element={<Category />} />
         </Routes>
         <Navbar />
       </Router>
