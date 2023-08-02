@@ -40,7 +40,7 @@ const Category = () => {
                 setLoading(false)
             }
             catch (error) {
-                toast.errro('çould not fetch listings')
+                toast.error('çould not fetch listings')
             }
         }
 
